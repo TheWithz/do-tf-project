@@ -1,8 +1,7 @@
-variable "do_token" {}
-variable "pub_key" {}
-variable "pvt_key" {}
-variable "ssh_fingerprint" {}
-
 provider "digitalocean" {
-  token = "var.do_token"
+  token = file(var.do_token)
+}
+
+data "digitalocean_ssh_key" "homebase_ssh" {
+  name = "homebase_ssh"
 }
