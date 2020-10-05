@@ -10,3 +10,5 @@ committing my key to this repository.
 
 To make that work, it was necessary to remove the newline character with:
 `truncate -s -1 /home/thewithz/do-tf-project/keys/do_token`
+
+Another small change was to the `providers.tf` where I query the ssh fingerprint from digital ocean rather than defining it in the config. 
